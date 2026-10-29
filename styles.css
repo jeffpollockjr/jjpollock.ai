@@ -118,6 +118,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   text-decoration: none;
 }
 .nav-brand::after { content: "\0020\2726"; color: var(--orange); font-size: 1rem; }
+.nav-brand { display: inline-flex; align-items: center; }
+.nav-brand-icon {
+  height: 34px;
+  width: 34px;
+  border-radius: 9px;
+  box-shadow: 2px 2px 0 var(--ink);
+  display: block;
+}
 .nav-links { display: flex; align-items: center; gap: 1.75rem; }
 .nav-links a {
   color: var(--ink);
@@ -447,7 +455,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .service-detail {
   background: var(--paper);
   border: 2px solid var(--ink);
-  border-left: 8px solid var(--orange);
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: var(--shadow);
@@ -712,7 +719,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   gap: 1.5rem;
   background: var(--paper);
   border: 2px solid var(--ink);
-  border-left: 8px solid var(--orange);
   border-radius: var(--radius);
   padding: 1.5rem 1.75rem;
   box-shadow: var(--shadow);
@@ -829,4 +835,4 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (max-width: 640px) {
   .product-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .product-side { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
-}
+   }
