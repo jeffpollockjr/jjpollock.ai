@@ -228,6 +228,15 @@ const CALENDAR_BOOKING_URL = null;
         btn.target = "_blank";
         btn.rel = "noopener";
       }
+      btn.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "product_click", {
+            product_name: p.name,
+            action: p.price === 0 ? "download" : "buy",
+            price: p.price === 0 ? 0 : p.price / 100
+          });
+        }
+      });
       side.appendChild(btn);
 
       card.appendChild(body);
