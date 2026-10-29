@@ -26,6 +26,32 @@ const CALENDAR_BOOKING_URL = null;
   fallback.hidden = true;
 })();
 
+
+// ============================================================
+// MOBILE MENU (every page): hamburger toggle for the nav
+// dropdown shown under 760px. Closes on outside click / Escape.
+// ============================================================
+(function () {
+  var btn = document.getElementById("nav-menu-btn");
+  var menu = document.getElementById("nav-menu");
+  if (!btn || !menu) return;
+  function close() {
+    menu.hidden = true;
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Open menu");
+  }
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    var opening = menu.hidden;
+    menu.hidden = !opening;
+    btn.setAttribute("aria-expanded", String(opening));
+    btn.setAttribute("aria-label", opening ? "Close menu" : "Open menu");
+  });
+  menu.addEventListener("click", function (e) { e.stopPropagation(); });
+  document.addEventListener("click", close);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+})();
+
 // ============================================================
 // STORE (store.html only)
 // Renders the product list from PRODUCTS (products.js), with a
