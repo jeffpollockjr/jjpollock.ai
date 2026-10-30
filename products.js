@@ -52,7 +52,7 @@ const PRODUCTS = [
   {
     name: "AI Governance Handbook Template",
     description:
-      "A complete, editable handbook: policies, approval workflows, incident steps, and training outline. The full version of my governance service.",
+      "A complete, 54 page, editable handbook: policies, approval workflows, incident steps, and training outline. The full version of my governance service.",
     price: 4900,
     tags: ["template", "governance", "policy"],
     stripeLink: "https://buy.stripe.com/REPLACE_WITH_YOUR_LINK",
