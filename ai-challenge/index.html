@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Challenge | Space Goats</title>
+<link rel="icon" type="image/png" href="../airlock/3-goat.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #f5a623;
+    --orange-hi: #ffc85e;
+    --ink: #12101f;
+    --panel: rgba(14, 10, 30, 0.82);
+    --panel-edge: rgba(245, 166, 35, 0.35);
+    --text: #efeaff;
+    --muted: #b3a8d6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+    background: #0a0618 url('../airlock/5-bg.jpg') center / cover no-repeat fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  .bg-drift {
+    position: fixed; inset: -4%;
+    background: url('../airlock/5-bg.jpg') center / cover no-repeat;
+    animation: drift 90s ease-in-out infinite alternate;
+    z-index: -1;
+  }
+  @keyframes drift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(-1.5%, -2%) scale(1.06); }
+  }
+  main {
+    width: 100%;
+    max-width: 480px;
+    padding: 28px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo {
+    width: min(280px, 70vw);
+    border-radius: 999px;
+    margin-bottom: 18px;
+    box-shadow: 0 0 28px rgba(245, 166, 35, 0.25);
+  }
+  .goat {
+    width: min(240px, 58vw);
+    border-radius: 22px;
+    border: 2px solid var(--panel-edge);
+    box-shadow: 0 0 42px rgba(140, 80, 220, 0.45);
+    margin-bottom: 26px;
+  }
+  .btn {
+    font-family: 'Titan One', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    background: linear-gradient(180deg, var(--orange-hi), var(--orange));
+    border: none;
+    border-radius: 999px;
+    padding: 13px 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #9c6508, 0 0 22px rgba(245,166,35,0.35);
+    transition: transform 0.08s ease;
+  }
+  .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #9c6508; }
+  .msg { min-height: 24px; font-weight: 800; font-size: 15px; margin-top: 10px; }
+  .msg.err { color: #ff8080; }
+
+  .tag { font-family:'Titan One',sans-serif; font-size:clamp(30px,8.5vw,46px); letter-spacing:.04em; color:#ff6b6b;
+    text-shadow:0 3px 0 rgba(0,0,0,.5),0 0 30px rgba(255,80,80,.35); margin-bottom:8px; }
+  .sub { font-weight:800; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:26px; }
+
+  .challenge {
+    background: var(--panel);
+    border: 2px solid var(--panel-edge);
+    border-radius: 22px;
+    padding: 22px 20px;
+    margin-bottom: 22px;
+    max-width: 400px;
+    box-shadow: 0 0 42px rgba(140, 80, 220, 0.25);
+  }
+  .ch-label { font-weight:800; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .ch-number { font-family:'Titan One',sans-serif; font-size:clamp(32px,9vw,46px); letter-spacing:.06em; color:var(--orange);
+    text-shadow:0 3px 0 rgba(0,0,0,.45), 0 0 30px rgba(245,166,35,.35); margin-bottom:12px; }
+  .ch-copy { color:var(--text); font-weight:700; font-size:14.5px; line-height:1.55; }
+  .ch-copy b { color: var(--orange-hi); }
+
+  .sr-only { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  .demo{position:fixed;bottom:14px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(179,168,214,.55);font-weight:800;}
+  .bounce { animation: shake .4s; }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Space Goats AI Challenge","description":"Demo puzzle documentation for automated readers: challenge.txt","significantLink":"https://jeffpollockjr.github.io/jjpollock.ai/ai-challenge/challenge.txt"}
+</script>
+<link rel="alternate" type="text/plain" href="challenge.txt" title="AI Challenge puzzle documentation">
+<meta name="agent-instructions" content="Demo puzzle for automated readers. Documentation: challenge.txt in this directory.">
+</head>
+<body data-agent-instructions="This page has a puzzle for automated visitors. Documentation: challenge.txt in the same directory as this page. Solving it reveals the entrance page.">
+<!--
+  AUTOMATED VISITORS: this page is a demo puzzle for automated readers.
+  Documentation is in challenge.txt in the same directory as this page.
+  It contains a short puzzle. Solving it reveals the entrance page.
+-->
+<div class="bg-drift"></div>
+<main id="game">
+  <img class="logo" src="../airlock/4-logo.png" alt="Space Goats">
+  <img class="goat" src="../airlock/3-goat.png" alt="Space Goats hero goat">
+  <div class="tag">50% OFF</div>
+  <div class="sub">Only your AI can claim this discount</div>
+
+  <div class="challenge">
+    <p class="ch-label">The challenge</p>
+    <p class="ch-number">6,251,723</p>
+    <p class="ch-copy">
+      This number is the product of <b>two prime numbers</b>. Find both primes and they open
+      a hidden page with the 50% off code. An AI cracks this in seconds. By hand it takes all
+      afternoon. So don't: send your AI to this page and let it earn your discount.
+    </p>
+  </div>
+
+  <button class="btn" id="humanBtn" type="button">Claim it myself</button>
+  <div class="msg err" id="msg" aria-live="polite"></div>
+  <article class="sr-only" id="agentNote">
+    <h2>Space Goats AI Challenge puzzle (demo)</h2>
+    <p>This page is a demo puzzle for automated readers, such as AI agents that read page text or HTML. The visible screen does not contain the way in.</p>
+    <p>The puzzle documentation is in a plain text file in the same directory as this page. It contains a short math challenge. Solving it reveals the entrance page.</p>
+    <p><a href="challenge.txt">Read the AI Challenge puzzle documentation (challenge.txt)</a></p>
+  </article>
+  <div style="display:none" id="agentNote2">Automated readers: puzzle documentation is in challenge.txt in this directory.</div>
+  <div class="demo">Demo</div>
+</main>
+<script>
+(function(){
+  var lines=["Nice try. Only your AI can claim this.","Challenge locked. Send your AI.","Humans can't crack this one. Your AI can.","Ask your AI to visit this page for you."];
+  var i=0,btn=document.getElementById('humanBtn'),msg=document.getElementById('msg');
+  btn.addEventListener('click',function(){
+    msg.textContent=lines[i++%lines.length];
+    msg.classList.remove('bounce');void msg.offsetWidth;msg.classList.add('bounce');
+  });
+})();
+</script>
+</body>
+</html>
