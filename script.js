@@ -103,7 +103,7 @@ var JJ = (function () {
 
   // "N people have bought this" line
   function boughtText(p) {
-    if (typeof p.bought !== "number") return "New release";
+    if (typeof p.bought !== "number") return "Buyer count coming soon";
     var verb = isFree(p) ? "downloaded" : "bought";
     return p.bought.toLocaleString("en-US") + (p.bought === 1 ? " person has " : " people have ") + verb + " this";
   }

@@ -17,7 +17,7 @@
 //                  shows "Checkout opens soon".
 //   file         - FREE items only: file in downloads/ to download.
 //   bought       - number of people who bought it. null = shows
-//                  "New release" until you set a number.
+//                  "Buyer count coming soon" until you set a number.
 //   reviews      - 2 to 4 reviews, each:
 //                  { name: "Jane D.", role: "Owner, Acme", text: "..." }
 //                  Empty list = the Reviews section stays hidden.

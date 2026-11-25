@@ -20,7 +20,7 @@ Every product in the list and every product page comes from `products.js`.
 - **Add your Stripe link:** set `stripeLink: "https://buy.stripe.com/..."` on the product.
   Until then the Buy button shows "Checkout opens soon".
 - **Set the price:** `price` in cents (`4900` = $49). `0` = free. `null` = "Price coming soon".
-- **Buyer count:** set `bought: 37`. `null` shows "New release".
+- **Buyer count:** set `bought: 37`. `null` shows "Buyer count coming soon".
 - **Reviews (2 to 4):** fill the `reviews` list, for example
   `reviews: [{ name: "Jane D.", role: "Owner, Acme", text: "Loved it." }]`.
   With no reviews, the Reviews section stays hidden.
