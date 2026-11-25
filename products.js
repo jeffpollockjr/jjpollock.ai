@@ -32,7 +32,7 @@ const PRODUCTS = [
     name: "Space Goats",
     kind: "Card game",
     summary:
-      "A card game for 2 to 6 players. Goats, spaceships, and chaos, with 104 cards of anime-style art.",
+      "A card game for 2 to 6 players. Goats, spaceships, and the kind of chaos that demands a rematch.",
     description: [
       "Space Goats is a card game for 2 to 6 players. Collect goats, play cards that eject, destroy, and steal, and block your rivals' best moves.",
     ],
