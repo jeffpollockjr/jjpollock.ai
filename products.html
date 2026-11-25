@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GM2WL8X94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4GM2WL8X94');
+  </script>
+  <title>Products &amp; Services | JJ Pollock</title>
+  <meta name="description" content="Book an AI consultation with JJ Pollock, or browse his products: the Space Goats card game, AI prompt packs, and templates." />
+  <meta property="og:title" content="Products &amp; Services | JJ Pollock" />
+  <meta property="og:description" content="Book an AI consultation with JJ Pollock, or browse his products: the Space Goats card game, AI prompt packs, and templates." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=3" />
+  
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="index.html" aria-label="JJ Pollock - home"><img class="nav-brand-icon" src="favicon.svg" alt="JJ Pollock" /></a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="products.html" aria-current="page">Products &amp; Services</a>
+        <a class="nav-cta" href="https://calendar.app.google/TMziQw3TDMDG3Waf9" target="_blank" rel="noopener">Book a call</a>
+      </div>
+      <button class="nav-menu-btn" id="nav-menu-btn" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+      <div class="nav-menu" id="nav-menu" hidden>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="products.html" aria-current="page">Products &amp; Services</a>
+        <a href="https://calendar.app.google/TMziQw3TDMDG3Waf9" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow eyebrow-gold">Products &amp; Services</p>
+        <h1>Work with me, or buy what I've made</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="tabs" role="tablist" aria-label="Products or services">
+          <button class="tab" role="tab" id="tab-products" aria-controls="panel-products" aria-selected="true" type="button">Products</button>
+          <button class="tab" role="tab" id="tab-services" aria-controls="panel-services" aria-selected="false" type="button">Services</button>
+        </div>
+
+        <div id="panel-products" role="tabpanel" aria-labelledby="tab-products">
+          <div id="product-list" class="product-list"></div>
+        </div>
+
+        <div id="panel-services" role="tabpanel" aria-labelledby="tab-services" hidden>
+          <div class="service-pitch">
+            <p class="eyebrow">Consulting</p>
+            <h2>AI workflows and solutions, built around how you work</h2>
+            <p class="service-lede">
+              I consult with people and teams who want AI to do real work. We find the
+              workflows worth improving, then I help you design, build, and roll out what
+              fits. You end up with something your team owns and can run without me.
+            </p>
+            <ul class="service-points">
+              <li><b>Find the opportunities.</b> Where AI saves time or money, ranked by payoff.</li>
+              <li><b>Build the workflows.</b> Automations and assistants that connect the tools you already use.</li>
+              <li><b>Train your team.</b> Plain-language training and safe-use policies people follow.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-gold btn-large" href="https://calendar.app.google/TMziQw3TDMDG3Waf9" target="_blank" rel="noopener">Book a consultation</a>
+            </div>
+            <p class="service-note">Free 30-minute intro call. No pressure.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><span id="year"></span> JJ Pollock</p>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
