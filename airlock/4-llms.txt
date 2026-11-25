@@ -1,0 +1,6 @@
+# Space Goats
+
+> A card game. This page is a demo puzzle for automated readers.
+
+## Start here
+- [Airlock puzzle documentation](airlock.txt): a short puzzle that reveals the entrance page
