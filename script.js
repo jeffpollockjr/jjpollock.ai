@@ -129,7 +129,37 @@ var JJ = (function () {
     return (p.reviews || []).length > 0;
   }
 
-  return { el: el, find: find, href: href, isFree: isFree, priceText: priceText, actionButton: actionButton, boughtText: boughtText, boughtNumber: boughtNumber, reviews: reviews };
+  // Product icons: prompt packs are navy chat-bubble tiles, templates are
+  // peach document tiles, the rest have their own colour.
+  var ICONS = {
+    "everyday-ai-prompt-pack": ["pack", '<path d="M10 14h44a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H28l-12 10V44h-6a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"/><path d="M22 27h20M22 35h12"/>'],
+    "everyday-ai-prompt-pack-pro": ["pack", '<path d="M10 14h44a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H28l-12 10V44h-6a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"/><path d="M35 19l-9 12h8l-3 10 10-13h-8z" class="ic-acc"/>'],
+    "business-prompt-pack-team": ["pack", '<path d="M8 12h30a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H20l-8 7v-7H8a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4z"/><path d="M26 40v4a4 4 0 0 0 4 4h14l8 7v-7h4a4 4 0 0 0 4-4V32a4 4 0 0 0-4-4h-6" class="ic-acc"/>'],
+    "business-prompt-pack-executive": ["pack", '<path d="M10 14h44a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H28l-12 10V44h-6a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z"/><path d="M22 36l-2-12 8 6 4-8 4 8 8-6-2 12z" class="ic-acc"/>'],
+    "ai-governance-handbook-template": ["tpl", '<path d="M14 6h26l12 12v40H14z"/><path d="M40 6v12h12"/><path d="M32 28l9 3v8c0 6-4 10-9 12-5-2-9-6-9-12v-8z" class="ic-acc"/>'],
+    "ai-policy-starter-template": ["tpl", '<path d="M14 6h26l12 12v40H14z"/><path d="M40 6v12h12"/><path d="M22 28h18M22 36h14" /><path d="M24 48l5 5 11-11" class="ic-acc"/>'],
+    "ai-playbook-for-kids": ["book", '<path d="M32 16c-6-5-16-6-24-4v38c8-2 18-1 24 4 6-5 16-6 24-4V12c-8-2-18-1-24 4z"/><path d="M32 16v38"/><path d="M44 22l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1z" class="ic-acc"/>'],
+    "ai-readiness-checklist": ["check", '<rect x="12" y="10" width="40" height="46" rx="4"/><path d="M24 6h16v8H24z"/><path d="M20 26l4 4 7-8M20 42l4 4 7-8M37 27h9M37 43h9" class="ic-acc"/>']
+  };
+
+  function icon(p, size) {
+    var wrap = el("div", "p-icon p-icon-" + size);
+    if (p.slug === "space-goats") {
+      wrap.className += " p-icon-space";
+      var im = el("img");
+      im.src = "space-goats/goat.jpg";
+      im.alt = "";
+      wrap.appendChild(im);
+      return wrap;
+    }
+    var d = ICONS[p.slug] || ["pack", '<rect x="12" y="12" width="40" height="40" rx="6"/>'];
+    wrap.className += " p-icon-" + d[0];
+    wrap.setAttribute("aria-hidden", "true");
+    wrap.innerHTML = '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">' + d[1] + "</svg>";
+    return wrap;
+  }
+
+  return { icon: icon, el: el, find: find, href: href, isFree: isFree, priceText: priceText, actionButton: actionButton, boughtText: boughtText, boughtNumber: boughtNumber, reviews: reviews };
 })();
 
 // ============================================================
@@ -158,6 +188,7 @@ var JJ = (function () {
 
     card.appendChild(body);
     card.appendChild(side);
+    card.insertBefore(JJ.icon(p, "sm"), body);
     list.appendChild(card);
   });
 
@@ -211,6 +242,7 @@ var JJ = (function () {
   var grid = JJ.el("div", "product-grid");
 
   var main = JJ.el("div", "product-main");
+  main.appendChild(JJ.icon(p, "lg"));
   main.appendChild(JJ.el("p", "product-kind", p.kind || "Product"));
   main.appendChild(JJ.el("h1", null, p.name));
   (p.description || []).forEach(function (t) { main.appendChild(JJ.el("p", "product-desc", t)); });

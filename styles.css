@@ -1005,3 +1005,24 @@ a.product-card { text-decoration: none; color: var(--ink); }
   .tabs { display: flex; }
   .tab { flex: 1; padding: 0.65rem 0.5rem; }
 }
+
+/* Product icons */
+.p-icon { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); overflow: hidden; }
+.p-icon-sm { width: 84px; height: 84px; border-radius: 14px; }
+.p-icon-lg { width: 132px; height: 132px; border-radius: 20px; margin-bottom: 1.25rem; box-shadow: var(--shadow-sm); }
+.p-icon svg { width: 62%; height: 62%; }
+.p-icon .ic-acc { stroke: var(--orange); }
+.p-icon-pack { background: var(--ink); color: var(--paper); }
+.p-icon-pack .ic-acc { stroke: var(--gold); }
+.p-icon-tpl { background: var(--peach); color: var(--ink); background-image: linear-gradient(rgba(23,35,59,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(23,35,59,.08) 1px, transparent 1px); background-size: 12px 12px; }
+.p-icon-tpl .ic-acc { stroke: var(--orange-dark); }
+.p-icon-book { background: var(--teal); color: #fff; }
+.p-icon-book .ic-acc { stroke: var(--gold); }
+.p-icon-check { background: var(--gold); color: var(--ink); }
+.p-icon-check .ic-acc { stroke: var(--ink); }
+.p-icon-space { background: #0b0718; }
+.p-icon-space img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 640px) {
+  .p-icon-sm { width: 64px; height: 64px; border-radius: 12px; }
+}
+.product-card .product-body { flex: 1 1 auto; min-width: 0; }
