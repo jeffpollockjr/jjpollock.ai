@@ -191,12 +191,12 @@ a:focus-visible, .sg-btn:focus-visible { outline: 3px solid var(--orange-hi); ou
   .final-back { max-width: 108px; margin: 0 auto; }
   .sg-section { padding: 4rem 0; }
   .porthole-ring { inset: -10px; }
-  .fcard { width: 120px; }
-  .fan { height: 320px; }
-  .c1 { transform: translateX(-108px) rotate(-8deg); }
-  .c3 { transform: translateX(108px) rotate(8deg); }
-  .c1:hover { transform: translateX(-108px) rotate(-4deg) translateY(-20px); }
-  .c3:hover { transform: translateX(108px) rotate(4deg) translateY(-20px); }
+  .fcard { width: 106px; }
+  .fan { height: 300px; }
+  .c1 { transform: translateX(-100px) rotate(-7deg); }
+  .c3 { transform: translateX(100px) rotate(7deg); }
+  .c1:hover { transform: translateX(-100px) rotate(-3deg) translateY(-18px); }
+  .c3:hover { transform: translateX(100px) rotate(3deg) translateY(-18px); }
   .acard { width: 160px; }
   .action-cards { height: 300px; }
   .sg-buy { width: 100%; }
